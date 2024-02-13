@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
-}
+/* client/src/App.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: #f8f8f8;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100vh;
+}
+
+.chat-container {
+  max-width: 600px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.9); /* Adjust the transparency by changing the alpha value */
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  animation: bounceInUp 1s ease forwards;
+}
+
+@keyframes bounceInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-container {
+  margin-top: 20px;
+}
+
+.message {
+  background-color: #f1f1f1;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+  display: flex;
+  margin-top: 20px;
+}
+
+.input-field {
+  flex: 1;
+  padding: 15px;
+  border-radius: 16px;
+  border: 2px solid #cccccc;
+  border-right: none;
+  font-size: 16px;
+}
+
+.send-button {
+  background-color: #4caf50;
   color: white;
+  border: none;
+  border-radius: 0 16px 16px 0;
+  padding: 15px 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.send-button:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.send-button:active {
+  background-color: #3e8e41;
 }
